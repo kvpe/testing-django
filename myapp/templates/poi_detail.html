@@ -1,0 +1,9 @@
+<h1>{{ poi.name }}</h1>
+<p>{{ poi.description }}</p>
+
+<h2>Discussion</h2>
+{% for discussion in discussions %}
+    <p>{{ discussion.user.username }} - {{ discussion.comment }}</p>
+{% empty %}
+    <p>No discussions yet.</p>
+{% endfor %}
